@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "printWidth": 160,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "plugins": ["@prettier/plugin-oxc", "@trivago/prettier-plugin-sort-imports"],
+  "importOrder": ["^[./]", "^@/(.*)$", "^#/(.*)$", "<THIRD_PARTY_MODULES>"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderGroupNamespaceSpecifiers": true,
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx", "*.mjs", "*.cjs"],
+      "options": {
+        "parser": "oxc"
+      }
+    }
+  ]
+}
