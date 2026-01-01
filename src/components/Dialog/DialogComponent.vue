@@ -11,7 +11,9 @@
     <slot />
   </div>
   <div class="popup-actions">
-    <slot name="buttons" />
+    <slot name="buttons">
+      <button @click="close">닫기</button>
+    </slot>
   </div>
 </template>
 <script setup>

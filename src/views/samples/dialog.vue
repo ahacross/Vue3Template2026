@@ -4,7 +4,7 @@
 
     <button @click="onAlert">alert</button>
     <button @click="onConfirm">confirm</button>
-    <button @click="onModal">modal</button>
+    <button @click="onPopup">popup</button>
 
     <input v-model="kakao" type="text" />
   </div>
@@ -27,9 +27,9 @@ const onConfirm = async () => {
   console.log('onConfirm', result)
 }
 
-const onModal = async () => {
-  const result = await useDialog.modal(await import('@/components/Dialog/modalTemplate.vue'), { kakao: 1234 })
-  console.log('onModal', result)
+const onPopup = async () => {
+  const result = await useDialog.popup(await import('@/components/Dialog/modalTemplate.vue'), { kakao: 1234 })
+  console.log('onPopup', result)
 }
 
 const kakao = ref('')

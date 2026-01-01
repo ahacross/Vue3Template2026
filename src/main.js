@@ -10,7 +10,7 @@ import { store } from '@/stores'
 
 import { createVfm } from 'vue-final-modal'
 import { VueQueryPlugin } from '@tanstack/vue-query'
-import cmnModal from '@/components/Dialog/CmnModal.vue'
+import DialogComponent from '@/components/Dialog/DialogComponent.vue'
 
 const app = createApp(App)
 
@@ -19,6 +19,6 @@ app.use(store)
 
 app.use(createVfm())
 app.use(VueQueryPlugin)
-app.component('CmnModal', cmnModal)
+app.component('DialogComponent', DialogComponent)
 
 app.mount('#app')

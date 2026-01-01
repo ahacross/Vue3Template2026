@@ -13,6 +13,4 @@ definePage({
   },
 })
 /* ----- Route Config ----- */
-
-console.log('about 이다')
 </script>

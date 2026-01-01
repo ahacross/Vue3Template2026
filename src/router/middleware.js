@@ -12,8 +12,7 @@ import router from '@/router'
 router.beforeEach((to, from, next) => {
   // getUserStore()
 
-  if (to.path === from.path) {
-  } else {
+  if (to.path !== from.path) {
     next()
   }
 })

@@ -1,6 +1,6 @@
 <template>
   <VueFinalModal content-transition="vfm-fade" overlay-transition="vfm-fade">
-    <CmnModal :close="close">
+    <DialogComponent :close="close">
       <template #title> {{ title }} </template>
       <slot />
       <template #buttons>
@@ -9,11 +9,13 @@
         </button>
         <button @click="close">{{ cancelTxt }}</button>
       </template>
-    </CmnModal>
+    </DialogComponent>
   </VueFinalModal>
 </template>
 
 <script setup>
+import DialogComponent from '@/components/Dialog/DialogComponent.vue'
+
 import { VueFinalModal } from 'vue-final-modal'
 
 defineProps({

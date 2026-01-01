@@ -38,7 +38,12 @@ export default ({ mode }) => {
     plugins: [
       VueRouter({
         routesFolder: 'src/views',
-        routeBlockLang: 'json5',
+        importMode: filepath => {
+          // index.vue 등 진입점은 sync로 로딩하여 초기 렌더링 속도 확보
+          if (filepath.includes('index.vue')) return 'sync'
+          // 나머지는 async로 지연 로딩하여 번들 사이즈 최적화
+          return 'async'
+        },
         dts: './types/typed-router.d.ts',
         exclude: ['**/components/**/*.vue'],
       }),

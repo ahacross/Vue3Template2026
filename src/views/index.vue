@@ -11,5 +11,4 @@ definePage({
   },
 })
 /* ----- Route Config ----- */
-console.log('home 이다')
 </script>

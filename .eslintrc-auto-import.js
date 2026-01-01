@@ -184,6 +184,7 @@ export default {
     "useDevicePixelRatio": "readonly",
     "useDevicesList": "readonly",
     "useDialog": "readonly",
+    "useDialogHistory": "readonly",
     "useDisplayMedia": "readonly",
     "useDocumentVisibility": "readonly",
     "useDraggable": "readonly",
